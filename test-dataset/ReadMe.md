@@ -1,4 +1,4 @@
-Please use these example input files to test this app on DNANexus:
+### Example files to test this app on DNANexus:
 
 1. Bulk Pindel Indel VCF - "D54_Bulk_DNA.deduplicated.realign.recal_pindel_indel.vcf"
 2. Sample Pindel Indel VCF - "D54_SHR02_DNA.deduplicated.realign.recal_pindel_indel.vcf"
@@ -12,6 +12,7 @@ Please use these example input files to test this app on DNANexus:
 ```
 gunzip hg19_no_alt.fa.gz
 ```
+
 **BAM files to be obtained from dbGaP:**  
 _Accession no.: phs003683.v2.p1_
 
