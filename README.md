@@ -1,7 +1,7 @@
 # Single_Cell_Somatic_Mutation_Caller
 This app integrates RNA expression and haplotype information for each variant detected by Mutect2 to infer somatic mutations while distinguishing them from sequencing and amplification artifacts. It achieves this by leveraging additional data from matched DNA/RNA sequencing and haplotype information. Somatic mutations are expected to be present in both the genome and transcriptome, whereas artifacts typically do not exhibit this pattern. An exception to this occurs with truncating mutations. Additionally, somatic mutations often appear in cis with nearby germline polymorphisms, and this pattern remains consistent during amplification. This app also labels CC>TT or (C/T)C>T variants to indicate mutations with the canonical UV-radiation-induced mutational signature.
 
-This repository is for an app that runs on the DNAnexus Platform.
+**This repository is for an app that runs on the DNAnexus Platform.**
 For more information about how to run or modify it, see
 https://documentation.dnanexus.com/.
 
