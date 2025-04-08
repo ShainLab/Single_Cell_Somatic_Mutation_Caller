@@ -9,7 +9,7 @@ Please use these example input files to test this app on DNANexus:
 7. InputVariantsforphasing - "D54_Bulk_DNA.InputVariantsforphasing.txt"
 8. Funcotator_txt - "D54_SHR02_DNA.funcotator.txt"
 
-Files to unzip before use:
+**Files to unzip before use:**
 
 9. Reference Genome - "hg19_no_alt.fa.gz"
 ```
