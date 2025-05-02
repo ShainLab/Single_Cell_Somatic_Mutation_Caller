@@ -14,7 +14,7 @@ This app is designed for use with whole-genome, whole-exome and custom target pa
 Please refer to the following publication and preprints for use cases:
 1. Tang J, Fewing, Chang D, Zeng H, Liu S, Jorapur A, Belote RL, McNeal AS, Tan T, Yeh I, Arron ST, Judson-Torres RL, Bastian BC, Shain AH. The genomic landscapes of individual melanocytes from human skin. Nature. October 2020. https://doi.org/10.1038/s41586-020-2785-8.
 2. Tandukar B\*, Deivendran D\*, Chen L, Cruz-Pacheco N, Sharma H, Xu A, Bandari AK, Chen DB, George C, Marty A, Cho RJ, Cheng J, Saylor D, Gerami P, Arron ST, Bastian BC, Shain AH. Genetic evolution of keratinocytes to cutaneous squamous cell carcinoma. bioRxiv. July 2024. https://doi.org/10.1101/2024.07.23.604673.
-3. Gerami P\*\#, Tandukar B\*, Deivendran D, Olivares S, Chen L, Tang J, Tan T, Sharma H, Bandari AK, Cruz-Pacheco N, Chang D, Marty A, Olshen A, Murad NF, Song J, Lee J, Yeh I, Shain AH#. Molecular effects of indoor tanning. bioRxiv. June 2024. https://doi.org/10.1101/2024.06.04.597225.
+3. Tandukar B, Deivendran D, Chen L, Bahrani N, Weier B, Sharma H, Cruz-Pacheco N, Hu M, Marks K, Zitnay RG, Bandari AK, Nekoonam R, Yeh I, Judson-Torres R, Shain AH. Somatic mutations distinguish melanocyte subpopulations in human skin. https://doi.org/10.1101/2025.02.07.637114.
 
 _*jointly led the project. #co-senior author._
 
