@@ -64,9 +64,9 @@ This app generates multiple output files including:
   ```
   tar -xzf funcotator_dataSources.v1.6.20190124s.tar.gz
   ```
---
-### **[IMPORTANT!] Before building the applet, move both uncompressed hg19.fa and funcotator_dataSources.v1.6.20190124s folder into this directory: /resources/home/dnanexus/**
---  
+- - -
+**[IMPORTANT!] Before building the applet, move both uncompressed hg19.fa and funcotator_dataSources.v1.6.20190124s folder into this directory: /resources/home/dnanexus/**
+- - -
 4. Once these files have been added to the subdirectory mentioned above, you can begin building this applet on DNAnexus using the following commands:
 
 &nbsp;&nbsp;&nbsp;&nbsp; a. Install dx-toolkit (if not already installed): https://documentation.dnanexus.com/downloads  
