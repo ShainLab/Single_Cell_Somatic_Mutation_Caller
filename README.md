@@ -29,7 +29,7 @@ This app requires the following input files:
 - Funcotator txt file - For functional annotation of variants
 - Reference genome in FASTA format - For alignment and variant calling
 
-_Please refer to the example inputs in test-dataset to test this app on DNANexus._
+_Please refer to the example inputs in test-dataset to test this app on DNAnexus._
 
 ## What does this app output?
 This app generates multiple output files including:
@@ -37,3 +37,45 @@ This app generates multiple output files including:
 - Indel mutation list and filtering results
 - Mpileup analysis files for DNA, RNA, and Normal samples
 - Sorted BAM files and their indices - phased haplotype reads
+
+## How to clone and build this applet to run on DNAnexus?
+
+1. Clone this repository:
+  ```
+  git clone https://github.com/ShainLab/Single_Cell_Somatic_Mutation_Caller.git
+  ```
+2. Move and rename "DNAnexus_app" subdirectory to "Single_Cell_Somatic_Mutation_Caller" for applet build (test-dataset should not be included). _This is to ensure the proper sturucture for DNAnexus applet build_:
+  ```
+  cp -r Single_Cell_Somatic_Mutation_Caller/DNAnexus_app ./Single_Cell_Somatic_Mutation_Caller
+  ```
+3. Due to GitHub file size limits, these large resources need to be downloaded separately before building the applet:
+
+&nbsp;&nbsp;&nbsp;&nbsp; a. **hg19.fa** - Download here: [UCSC Genome Browser](http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/)
+ 
+&nbsp;&nbsp;&nbsp;&nbsp; Uncompress this file before build:
+  ```
+  gunzip hg19.fa.gz
+  ```
+&nbsp;&nbsp;&nbsp;&nbsp; b. **funcotator_dataSources.v1.6.20190124s** - Download here:
+  ```
+  wget ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/funcotator/funcotator_dataSources.v1.6.20190124s.tar.gz --no-check-certificate
+  ```
+&nbsp;&nbsp;&nbsp;&nbsp; Uncompress this file before build:
+  ```
+  tar -xzf funcotator_dataSources.v1.6.20190124s.tar.gz
+  ```
+#### [IMPORTANT!] Before building move both uncompressed hg19.fa and funcotator_dataSources.v1.6.20190124s folder into this directory: /resources/home/dnanexus/
+
+4. Once these files have been added to the subdirectory mentioned above, you can begin building this applet on DNAnexus using the following commands:
+
+&nbsp;&nbsp;&nbsp;&nbsp; a. Install dx-toolkit (if not already installed): https://documentation.dnanexus.com/downloads  
+&nbsp;&nbsp;&nbsp;&nbsp; b. Move into newly copied and renamed directory:
+```
+cd Single_Cell_Somatic_Mutation_Caller
+```  
+&nbsp;&nbsp;&nbsp;&nbsp;c. Run the build command. _Replace ProjectName:path/to/your/directory with your DNAnexus project name and path for applet to build._
+```
+dx build -d ProjectName:path/to/your/directory
+``` 
+
+You should see the applet in this directory when done. Select it, add the input files to their respective input boxes, under Workflow Actions set your output folder, then click start as analysis.
