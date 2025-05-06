@@ -44,7 +44,7 @@ This app generates multiple output files including:
   ```
   git clone https://github.com/ShainLab/Single_Cell_Somatic_Mutation_Caller.git
   ```
-2. Move and rename "DNAnexus_app" subdirectory to "Single_Cell_Somatic_Mutation_Caller" for applet build (test-dataset should not be included). _This is to ensure the proper sturucture for DNAnexus applet build_:
+2. Move and rename "DNAnexus_app" subdirectory to "Single_Cell_Somatic_Mutation_Caller" (test-dataset should not be included). _Note: This is to ensure the proper sturucture for DNAnexus applet build_:
   ```
   cp -r Single_Cell_Somatic_Mutation_Caller/DNAnexus_app ./Single_Cell_Somatic_Mutation_Caller
   ```
@@ -69,7 +69,7 @@ This app generates multiple output files including:
 - - -
 4. Once these files have been added to the subdirectory mentioned above, you can begin building this applet on DNAnexus using the following commands:
 
-&nbsp;&nbsp;&nbsp;&nbsp; a. Install dx-toolkit (if not already installed): https://documentation.dnanexus.com/downloads  
+&nbsp;&nbsp;&nbsp;&nbsp; a. Install dx-toolkit (if not already installed): [DNAnexus Documentation] https://documentation.dnanexus.com/downloads  
 &nbsp;&nbsp;&nbsp;&nbsp; b. Move into newly copied and renamed directory:
 ```
 cd Single_Cell_Somatic_Mutation_Caller
