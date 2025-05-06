@@ -1,0 +1,235 @@
+{
+  "name": "Single_Cell_Somatic_Mutation_Caller",
+  "title": "Single Cell Somatic Mutation Caller",
+  "summary": "Generate a list of somatic mutations from single cell sequencing data",
+  "dxapi": "1.0.0",
+  "version": "1.3.1",
+  "inputSpec": [
+    {
+      "name": "RNAbam",
+      "label": "Sample RNA Bam",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.bam"],
+      "optional": false
+    },
+    {
+      "name": "Pindel_Normal_vcf",
+      "label": "Bulk Pindel Indel VCF",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.vcf"],
+      "optional": false
+    },
+    {
+      "name": "MpileupInformativeSNP",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.txt"],
+      "optional": false
+    },
+    {
+      "name": "InputVariantsforphasing",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.txt"],
+      "optional": false
+    },
+    {
+      "name": "Pindel_Sample_vcf",
+      "label": "Sample Pindel Indel VCF",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.vcf"],
+      "optional": false
+    },
+    {
+      "name": "Normalbam",
+      "label": "Patient Bulk Bam",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.bam"],
+      "optional": false
+    },
+    {
+      "name": "DNAbam",
+      "label": "Sample DNA Bam",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.bam"],
+      "optional": false
+    },
+    {
+      "name": "Funcotator_txt",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.txt"],
+      "optional": false
+    },
+    {
+      "name": "genome_fa",
+      "label": "Reference Genome",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.fa", "*.fasta"],
+      "optional": false
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "Mpileup_DNA",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Mpileup_LOH",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "JavaTree",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Mpileup_Sort0",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Mpileup_Sort1",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Mpileup_Normal",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Mpileup_RNA",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "SeqContextOutput",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Sort0bam",
+      "label": "Phased haplotype reads",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Sort1bam",
+      "label": "Phased haplotype reads",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Sort0bai",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Sort1bai",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "MMLtxt",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "SeqContextInput",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Indel_MML",
+      "label": "Indel Mutation List",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Indel_MMLtxt",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "Pindel_Filt",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "pindel_func",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    },
+    {
+      "name": "MMLxlsx",
+      "label": "Master Mutation List",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"]
+    }
+  ],
+  "runSpec": {
+    "interpreter": "bash",
+    "executionPolicy": {
+      "restartOn": {
+        "UnresponsiveWorker": 2,
+        "JMInternalError": 1
+      }
+    },
+    "timeoutPolicy": {
+      "*": {
+        "hours": 500
+      }
+    },
+    "headJobOnDemand": false,
+    "distribution": "Ubuntu",
+    "release": "16.04",
+    "version": "0",
+    "file": "src/code.sh"
+  },
+  "regionalOptions": {
+    "aws:us-east-1": {
+      "systemRequirements": {
+        "*": {
+          "instanceType": "mem2_ssd1_x8"
+        }
+      }
+    }
+  },
+  "details": {},
+  "categories": [],
+  "access": {
+    "network": [
+      "*"
+    ],
+    "project": "CONTRIBUTE"
+  },
+  "ignoreReuse": false
+}
