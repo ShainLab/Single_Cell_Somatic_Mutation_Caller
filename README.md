@@ -2,8 +2,8 @@
 This app integrates RNA expression and haplotype information for each variant detected by Mutect2 to infer somatic mutations while distinguishing them from sequencing and amplification artifacts. It achieves this by leveraging additional data from matched DNA/RNA sequencing and haplotype information. Somatic mutations are expected to be present in both the genome and transcriptome, whereas artifacts typically do not exhibit this pattern. An exception to this occurs with truncating mutations. Additionally, somatic mutations often appear in cis with nearby germline polymorphisms, and this pattern remains consistent during amplification. This app also labels CC>TT or (C/T)C>T variants to indicate mutations with the canonical UV-radiation-induced mutational signature.
 
 **This repository is for an app that runs on the DNAnexus Platform.**
-For more information about how to run or modify it, see
-https://documentation.dnanexus.com/.
+This app has been made publicly available on DNAnexus. To run, navigate to the Tools Library and select the app (Single Cell Somatic Mutation Caller). For more information about how to run or modify it, see https://documentation.dnanexus.com/.
+If you would like you clone the app and build it on your own, please refer to "How to clone and build this app to run on DNAnexus?" section.
 
 ## What does this app do?
 This app integrates RNA expression and haplotype information for each variant detected by Mutect2 to infer somatic mutations while distinguishing them from sequencing and amplification artifacts. It achieves this by leveraging additional data from matched DNA/RNA sequencing and haplotype information. Somatic mutations are expected to be present in both the genome and transcriptome, whereas artifacts typically do not exhibit this pattern. An exception to this occurs with truncating mutations. Additionally, somatic mutations often appear in cis with nearby germline polymorphisms, and this pattern remains consistent during amplification. This app also labels CC>TT or (C/T)C>T variants to indicate mutations with the canonical UV-radiation-induced mutational signature.
@@ -38,17 +38,17 @@ This app generates multiple output files including:
 - Mpileup analysis files for DNA, RNA, and Normal samples
 - Sorted BAM files and their indices - phased haplotype reads
 
-## How to clone and build this applet to run on DNAnexus?
+## How to clone and build this app to run on DNAnexus?
 
 1. Clone this repository:
   ```
   git clone https://github.com/ShainLab/Single_Cell_Somatic_Mutation_Caller.git
   ```
-2. Move and rename "DNAnexus_app" subdirectory to "Single_Cell_Somatic_Mutation_Caller" (test-dataset should not be included). _Note: This is to ensure the proper sturucture for DNAnexus applet build_:
+2. Move and rename "DNAnexus_app" subdirectory to "Single_Cell_Somatic_Mutation_Caller" (test-dataset should not be included). _Note: This is to ensure the proper sturucture for DNAnexus app build_:
   ```
   cp -r Single_Cell_Somatic_Mutation_Caller/DNAnexus_app ./Single_Cell_Somatic_Mutation_Caller
   ```
-3. Due to GitHub file size limits, these large resources need to be downloaded separately before building the applet:
+3. Due to GitHub file size limits, these large resources need to be downloaded separately before building the app:
 
 &nbsp;&nbsp;&nbsp;&nbsp; a. **hg19.fa** - Download here: [UCSC Genome Browser](http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/)
  
@@ -65,18 +65,18 @@ This app generates multiple output files including:
   tar -xzf funcotator_dataSources.v1.6.20190124s.tar.gz
   ```
 - - -
-**[IMPORTANT!] Before building the applet, move both uncompressed hg19.fa and funcotator_dataSources.v1.6.20190124s folder into this directory: /resources/home/dnanexus/**
+**[IMPORTANT!] Before building the app, move both uncompressed hg19.fa and funcotator_dataSources.v1.6.20190124s folder into this directory: /resources/home/dnanexus/**
 - - -
-4. Once these files have been added to the subdirectory mentioned above, you can begin building this applet on DNAnexus using the following commands:
+4. Once these files have been added to the subdirectory mentioned above, you can begin building this app on DNAnexus using the following commands:
 
-&nbsp;&nbsp;&nbsp;&nbsp; a. Install dx-toolkit (if not already installed): [DNAnexus Documentation] https://documentation.dnanexus.com/downloads  
+&nbsp;&nbsp;&nbsp;&nbsp; a. Install dx-toolkit (if not already installed): [dx-toolkit installation](https://documentation.dnanexus.com/downloads)  
 &nbsp;&nbsp;&nbsp;&nbsp; b. Move into newly copied and renamed directory:
 ```
 cd Single_Cell_Somatic_Mutation_Caller
 ```  
-&nbsp;&nbsp;&nbsp;&nbsp;c. Run the build command. _Replace ProjectName:path/to/your/directory with your DNAnexus project name and path for applet to build._
+&nbsp;&nbsp;&nbsp;&nbsp;c. Run the build command. _Replace ProjectName:path/to/your/directory with your DNAnexus project name and path for app to build._
 ```
 dx build -d ProjectName:path/to/your/directory
 ``` 
 
-You should see the applet in this directory when done. Select it, add the input files to their respective input boxes, under Workflow Actions set your output folder, then click start as analysis.
+You should see the app in this directory when done. Select it, add the input files to their respective input boxes, under Workflow Actions set your output folder, then click start as analysis.
