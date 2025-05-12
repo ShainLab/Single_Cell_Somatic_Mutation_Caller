@@ -1,10 +1,10 @@
 # Single_Cell_Somatic_Mutation_Caller (DNAnexus Platform Applet)
 This app integrates RNA expression and haplotype information for each variant detected by Mutect2 to infer somatic mutations while distinguishing them from sequencing and amplification artifacts. It achieves this by leveraging additional data from matched DNA/RNA sequencing and haplotype information. Somatic mutations are expected to be present in both the genome and transcriptome, whereas artifacts typically do not exhibit this pattern. An exception to this occurs with truncating mutations. Additionally, somatic mutations often appear in cis with nearby germline polymorphisms, and this pattern remains consistent during amplification. This app also labels CC>TT or (C/T)C>T variants to indicate mutations with the canonical UV-radiation-induced mutational signature.
-
-**This repository is for an app that runs on the DNAnexus Platform.**
-This app has been made publicly available on DNAnexus. To run, navigate to the Tools Library and select the app (Single Cell Somatic Mutation Caller). For more information about how to run or modify it, see https://documentation.dnanexus.com/.
-If you would like you clone the app and build it on your own, please refer to "How to clone and build this app to run on DNAnexus?" section.
-
+- - -
+_**This repository is for an app that runs on the DNAnexus Platform.**  
+This app has been made publicly available on DNAnexus. To run, navigate to the Tools Library and select the app (Single Cell Somatic Mutation Caller). For more information about how to run or modify it, see https://documentation.dnanexus.com/.  
+If you would like you clone the app and build it on your own DNAnexus account, please refer to [this section](https://github.com/ShainLab/Single_Cell_Somatic_Mutation_Caller/edit/main/README.md#how-to-clone-and-build-this-app-to-run-on-dnanexus)._
+- - -
 ## What does this app do?
 This app integrates RNA expression and haplotype information for each variant detected by Mutect2 to infer somatic mutations while distinguishing them from sequencing and amplification artifacts. It achieves this by leveraging additional data from matched DNA/RNA sequencing and haplotype information. Somatic mutations are expected to be present in both the genome and transcriptome, whereas artifacts typically do not exhibit this pattern. An exception to this occurs with truncating mutations. Additionally, somatic mutations often appear in cis with nearby germline polymorphisms, and this pattern remains consistent during amplification. This app also labels CC>TT or (C/T)C>T variants to indicate mutations with the canonical UV-radiation-induced mutational signature.
 
