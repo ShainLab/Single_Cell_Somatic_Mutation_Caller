@@ -70,7 +70,7 @@ This app generates multiple output files including:
 4. Once these files have been added to the subdirectory mentioned above, you can begin building this app on DNAnexus using the following commands:
 
 &nbsp;&nbsp;&nbsp;&nbsp; a. Install dx-toolkit (if not already installed): [dx-toolkit installation](https://documentation.dnanexus.com/downloads)  
-&nbsp;&nbsp;&nbsp;&nbsp; b. Move into newly copied and renamed directory:
+&nbsp;&nbsp;&nbsp;&nbsp; b. Move into the root directory:
 ```
 cd Single_Cell_Somatic_Mutation_Caller
 ```  
