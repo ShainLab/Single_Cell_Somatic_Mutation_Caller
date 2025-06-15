@@ -5,7 +5,8 @@ To verify that the user could use alternative approaches to come up with an init
 ## Files
 - `Pindel_Indel_MML.xlsx` -  Indel_MML.xlsx output from Single_Cell_Somatic_MutationCaller using Pindel
 - `Mutect2_Indel_MML.xlsx` - Indel_MML.xlsx output from Single_Cell_Somatic_MutationCaller using Mutect2
-- `PindelvMutect2.xlsx` - Summary of indel calls with comparison of output from both indel callers
+- `PindelvMutect2.xlsx` - Summary of indel calls from both indel callers
+- `PindelvMutect2metrics.pdf` - Metrics of indel filtering from both indel callers
 
 ## Notes
 
