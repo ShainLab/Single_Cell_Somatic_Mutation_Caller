@@ -27,5 +27,5 @@ To verify that the user could use alternative approaches to come up with an init
 
 In summary, both callers identified the same 2 genuine somatic indels, however Mutect2 produced 1,418 total candidate calls post-filtering. Upon manual inspection of the top indels rank ordered by their allele frequency, there was a clear pattern whereby MuTect2 was calling indels in homopolymers. Pindel's vastly superior specificity (100% vs 0.14% precision) significantly reduces downstream analytical burden and potential for false discoveries.
   
-See `PindelvMutect2.xlsx` for detailed metrics.
+See `PindelvMutect2.xlsx` for complete indel list after filtering. See `PindelvMutect2metrics.pdf` for detailed metrics.
 
