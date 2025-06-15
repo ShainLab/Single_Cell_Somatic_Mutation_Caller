@@ -11,9 +11,8 @@ To verify that the user could use alternative approaches to come up with an init
 
 - Both output Indel_MML.xlsx were generated using the same input dataset processed through these different indel callers
 - The same methods and filters as decribed in our publications were applied to generate final indel calls;
-  1. Indels from the sample are cross-referenced with the normal, then any indels present in the normal are removed from the sample indel list
-  2. Remaining indels undergo further filtering whereby the indels that pass filtering have 0 mutant reads in the normal, are not considered ONPs (Other Nucleotide Polymorphisms), and either have at least 1 mutant read in the sample or is a single base indel.
-  3. Indels with sample mut ≤ 4 or coverage ≤ 10X are removed from the final list.  
+  1. Indels from the sample are cross-referenced with the normal, then any indels present in the normal are removed from the sample indel list. Remaining indels undergo further filtering whereby the indels that pass filtering have 0 mutant reads in the normal, are not considered ONPs (Other Nucleotide Polymorphisms), and either have at least 1 mutant read in the sample or is a single base indel.
+  2. Indels with sample mut ≤ 4 or coverage ≤ 10X are removed from the final list.  
 
 ## Results Summary
 
